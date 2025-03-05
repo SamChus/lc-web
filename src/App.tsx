@@ -4,12 +4,11 @@ function App() {
 
   return (
     <>
-      <div className="light">
-        <h1>LightWorld City</h1>
+      <div className="light bg-blue-600">
+        <h1 className="text-6xl ">LightWorld City</h1>
       </div>
-
     </>
-  )
+  );
 }
 
 export default App
