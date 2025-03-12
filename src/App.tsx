@@ -1,14 +1,25 @@
-import './App.css'
+import "./App.css";
+import WeeklyProgram from "./WeeklyProgram";
+
 
 function App() {
+  
 
   return (
-    <>
-      <div className="light bg-blue-600">
-        <h1 className="text-6xl text-white">LightWorld City</h1>
-      </div>
-    </>
+    <div className="mx-auto p-4">
+      {/* NAVIGATION */}
+      {/* HERO SECTION */}
+      {/* COUNTDOWN SECTION */}
+      {/* PROGRAMS SECTION */}
+      {/* WEEKLY PROGRAM SECTION */}
+      <WeeklyProgram />
+      {/* EVENTS SECTION */}
+      {/* ABOUT SECTION */}
+      {/* MEET OUR PRESIDENT SECTION */}
+      {/* MINISTRIES SECTION */}
+      {/* FOOTER SECTION */} 
+    </div>
   );
 }
 
-export default App
+export default App;
