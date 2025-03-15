@@ -5,12 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-
 // import required modules
 import { Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
 
-import { cn } from "./lib/utils";
+import { cn } from "../lib/utils";
 
 interface CarouselProps {
   slides: React.ReactNode[];
