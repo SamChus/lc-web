@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-5 z-20 text-white">
+    <nav className="top-0 left-0 w-full flex gap-[20%] items-center p-5 z-50 text-white">
       <div className="flex items-center gap-2">
         <img src={icons.logo} alt="Logo" className="w-12 h-12" />
       </div>
