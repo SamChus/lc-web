@@ -51,14 +51,41 @@ const AboutSection = ({ title, mission, vision, images }: AboutCompoProps) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div>
+      </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            modules={[EffectCoverflow]}
+            className="w-full max-w-md"
+          >
+            {images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  className="rounded-lg shadow-lg"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div>
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Vision</h3>
           <p className="text-gray-700 mb-4">{vision}</p>
           <a href="#" className="text-purple-600 font-semibold">
             Learn More
           </a>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
