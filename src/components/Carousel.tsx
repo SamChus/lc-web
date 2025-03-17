@@ -23,9 +23,10 @@ interface CarouselProps {
   slides: React.ReactNode[];
   classname?: string;
   fill?: boolean;
+  delay?: number;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ slides, classname, fill }) => {
+const Carousel: React.FC<CarouselProps> = ({ slides, classname, fill, delay }) => {
   const [isMobile, setIsMobile] = useState(false);
   const swiper = useSwiper();
 
@@ -49,7 +50,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, classname, fill }) => {
       modules={[Navigation, Autoplay]}
       slidesPerView={isMobile ? 1 : 2}
       className={cn("mySwiper gap-8", classname)}
-      autoplay={{ delay: 5000 }} // Enable automatic slide
+      autoplay={{ delay}} // Enable automatic slide
       spaceBetween={20} // Add space between slides
       navigation={{
         // Add navigation buttons

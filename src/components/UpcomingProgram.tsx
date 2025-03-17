@@ -19,10 +19,13 @@ const UpcomingEvent = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
-        <Carousel slides={slides} classname="w-full"/>
-        <div className="flex flex-col justify-center lg:w-1/2 lg:p-10">
+        <Carousel slides={slides} classname="w-full" delay={10000}/>
+        <div className="flex flex-col justify-center p-4 lg:w-1/2 lg:p-10">
           <h2 className="text-[#B22E7B] text-[32px] py-3">UPCOMING PROGRAMS</h2>
           <p className="text-[40px]">GLOBAL CONFERENCES</p>
+          <button className="w-[280px] bg-[#9C1FDB] text-white px-8 py-3  rounded-lg mt-4">
+            REGISTER NOW
+          </button>
         </div>
       </div>
     </div>

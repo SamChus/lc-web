@@ -3,6 +3,7 @@ import Carousel from "./Carousel";
 import ImageOne from "../assets/p3c.jpg";
 import ImageTwo from "../assets/p6c.jpg";
 import ImageThree from "../assets/p5.jpg";
+import Connect from "./Connect";
 
 const WeeklyProgram = () => {
   const slides = [
@@ -60,10 +61,11 @@ const WeeklyProgram = () => {
     <div className="container mx-auto py-12">
       <h1 className="text-[48px] text-center my-8">Programs</h1>
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
-        <Carousel slides={slides} classname="w-full " fill/>
+        <Carousel slides={slides} classname="w-full " fill delay={3000}/>
         <div className="flex flex-col justify-center p-4 lg:w-1/2 lg:p-10">
           <h2 className="text-[#B22E7B] text-[32px] py-3">WEEKLY SERVICES</h2>
           <p className="text-[40px]">THE APOSTOLIC KINGDOM BASED TEACHINGS</p>
+          <Connect bgColor="bg-[#9C1FDB]" />
         </div>
       </div>
     </div>

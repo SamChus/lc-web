@@ -46,10 +46,11 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-white text-4xl md:text-6xl font-bold max-w-3xl mb-8">
-          To Raise Ambassadors as Kings & Priests For Global And Apostolic Impact.
+          To Raise Ambassadors as Kings & Priests For Global And Apostolic
+          Impact.
         </h1>
-        <Connect />
-      
+        <Connect bgColor="bg-pink-600" />
+
         <div className="flex gap-2 mt-8">
           {backgroundImages.map((_, index) => (
             <div
@@ -60,7 +61,7 @@ const HeroSection = () => {
               style={{
                 opacity: 0.2,
                 animation: `dotHighlight 15s infinite ${index * 5}s`,
-                animationFillMode: 'both'
+                animationFillMode: "both",
               }}
             />
           ))}
@@ -89,11 +90,15 @@ const HeroSection = () => {
           animation: slideshow 15s infinite;
         }
 
-        ${backgroundImages.map((_, index) => `
+        ${backgroundImages
+          .map(
+            (_, index) => `
           .slideshow-image:nth-child(${index + 1}) {
             animation-delay: ${index * 5}s;
           }
-        `).join('')}
+        `
+          )
+          .join("")}
 
         @keyframes slideshow {
           0% { opacity: 0; }
