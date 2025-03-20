@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import { EffectCoverflow } from "swiper/modules";
+import "swiper/css/effect-cards";
+import { EffectCards, Autoplay } from "swiper/modules";
+import EffectCarousel from "./EffcetCarousel";
 
 interface AboutCompoProps {
   title: string;
@@ -26,20 +27,13 @@ const AboutSection = ({ title, mission, vision, images }: AboutCompoProps) => {
             Learn More
           </a>
         </div>
-        <Swiper
-          effect={"coverflow"}
+        <EffectCarousel />
+        {/* <Swiper
+          effect={"cards"}
           grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          modules={[EffectCoverflow]}
-          className="w-full max-w-md"
+          modules={[EffectCards, Autoplay]}
+          autoplay={{ delay: 3000 }}
+          className="w-full max-w-md "
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
@@ -50,34 +44,10 @@ const AboutSection = ({ title, mission, vision, images }: AboutCompoProps) => {
               />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
       </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            modules={[EffectCoverflow]}
-            className="w-full max-w-md"
-          >
-            {images.map((img, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  className="rounded-lg shadow-lg"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      {/* <div className="grid md:grid-cols-2 gap-12 items-center">
+        
           <div>
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Vision</h3>
           <p className="text-gray-700 mb-4">{vision}</p>
@@ -85,7 +55,7 @@ const AboutSection = ({ title, mission, vision, images }: AboutCompoProps) => {
             Learn More
           </a>
         </div>
-        </div>
+      </div> */}
     </section>
   );
 };

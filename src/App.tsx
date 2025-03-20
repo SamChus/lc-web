@@ -44,8 +44,12 @@ function App() {
         {/* MEET OUR PRESIDENT SECTION */}
         {/* MINISTRIES SECTION */}
         {/* FOOTER SECTION */}
-        <ContactUs />
-        <Footer />
+        <div className="bg-[#792F9E] text-white py-12 px-6 md:px-16">
+          <ContactUs />
+          <div className="border-[.5px] border-[#ffffff4d] my-10 w-[90%] m-auto" />
+
+          <Footer />
+        </div>
       </div>
     </BrowserRouter>
   );
