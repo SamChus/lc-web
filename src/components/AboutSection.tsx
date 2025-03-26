@@ -19,13 +19,24 @@ const AboutSection = ({ title, mission, vision, images }: AboutCompoProps) => {
       </h2>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-            Our Mission
-          </h3>
-          <p className="text-gray-700 mb-4">{mission}</p>
-          <a href="#" className="text-purple-600 font-semibold">
-            Learn More
-          </a>
+          <div>
+            <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
+              Our Mission
+            </h3>
+            <p className="text-gray-700 mb-4">{mission}</p>
+            <a href="#" className="text-purple-600 font-semibold">
+              Learn More
+            </a>
+          </div>
+          <div className="mt-8">
+            <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
+              Vision
+            </h3>
+            <p className="text-gray-700 mb-4">{vision}</p>
+            <a href="#" className="text-purple-600 font-semibold">
+              Learn More
+            </a>
+          </div>
         </div>
         <EffectCarousel />
         {/* <Swiper
