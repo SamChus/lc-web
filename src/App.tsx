@@ -22,7 +22,7 @@ function App() {
     "Reviving the elects through the word of possibilities, anointing and edification in Christ Jesus through the instrumentality of Global missions and sending missionaries to all nations of the earth and into all works of life for the full redemption of the total man unto dignity in Christ.";
 
   return (
-    <BrowserRouter>
+
       <div className="mx-auto">
         {/* NAVIGATION */}
         <HeroSection />
@@ -44,14 +44,8 @@ function App() {
         {/* MEET OUR PRESIDENT SECTION */}
         {/* MINISTRIES SECTION */}
         {/* FOOTER SECTION */}
-        <div className="bg-[#792F9E] text-white py-12 px-6 md:px-16">
-          <ContactUs />
-          <div className="border-[.5px] border-[#ffffff4d] my-10 w-[90%] m-auto" />
-
-          <Footer />
-        </div>
+       
       </div>
-    </BrowserRouter>
   );
 }
 
