@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout";
 import App from "../App";
+import Programs from "../pages/Programs";
 
 const navLinks = [
     { path: "/", element: <App /> }, // Home component
-    { path: "/programs", element: "Programs" },
+    { path: "/programs", element: <Programs /> }, // Programs component
     { path: "/about", element: "About" },
     { path: "/ministries", element: "Ministries" },
     { path: "/sermons", element: "Sermons" },
