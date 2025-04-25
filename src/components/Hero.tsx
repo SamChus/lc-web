@@ -5,30 +5,44 @@ import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const backgroundImages = [
-    image.papaimg,
-    image.papa1,
-    image.papa2,
+
+  // Define slides with image and text
+  const slides = [
+    {
+      image: image.papaimg,
+      text: "To Raise Ambassadors as Kings & Priests For Global And Apostolic Impact.",
+    },
+    {
+      image: image.pa,
+      text: "Equipping the Called For His Calling, Irrespective of Background, Expertise Or Academic Discipline.",
+    },
+    {
+      image: image.papa2,
+      text: "Raising Kings, Financial Apostles in Business, Education, and Politics.",
+    },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((current) => (current + 1) % backgroundImages.length);
+      setCurrentSlide((current) => (current + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [backgroundImages.length]);
+  }, [slides.length]);
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <div className="slideshow">
-          {backgroundImages.map((image, index) => (
+          {slides.map((slide, index) => (
             <img
               key={index}
-              src={image}
+              src={slide.image}
               alt={`Hero Background ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-cover slideshow-image"
+              className={`absolute inset-0 w-full h-full object-cover slideshow-image ${
+                currentSlide === index ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ transition: "opacity 1s ease-in-out" }}
             />
           ))}
         </div>
@@ -38,46 +52,43 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/65 z-10"></div>
       <div className="absolute inset-0 bg-pink-500/30 z-9"></div>
 
-      {/* Navbar Component - Ensure it's positioned correctly */}
+      {/* Navbar Component */}
       <div className="relative z-50">
         <Navbar />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-white text-4xl md:text-6xl font-bold max-w-3xl mb-8">
-          To Raise Ambassadors as Kings & Priests For Global And Apostolic
-          Impact.
-        </h1>
+        {slides.map((slide, index) => (
+          <h1
+            key={index}
+            className={`text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-xs sm:max-w-md md:max-w-3xl mb-4 sm:mb-6 md:mb-8 transition-opacity duration-1000 ${
+              currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ position: currentSlide === index ? "relative" : "absolute" }}
+          >
+            {slide.text}
+          </h1>
+        ))}
         <Connect bgColor="bg-pink-600" />
 
-        <div className="flex gap-2 mt-8">
-          {backgroundImages.map((_, index) => (
+        {/* Slide Indicators */}
+        <div className="flex gap-2 mt-4 sm:mt-6 md:mt-8">
+          {slides.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-500 slideshow-dot ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${
                 currentSlide === index ? "bg-pink-500" : "bg-white"
               }`}
               style={{
-                opacity: 0.2,
-                animation: `dotHighlight 15s infinite ${index * 5}s`,
-                animationFillMode: "both",
+                opacity: currentSlide === index ? 1 : 0.5,
               }}
             />
           ))}
-          <style>{`
-            @keyframes dotHighlight {
-              0% { opacity: 0.5; background-color: white; }
-              20% { opacity: 1; background-color: #EB1793; }
-              33.33% { opacity: 1; background-color: #EB1793; }
-              53.33% { opacity: 0.5; background-color: white; }
-              100% { opacity: 0.5; background-color: white; }
-            }
-          `}</style>
         </div>
       </div>
 
-      {/* Add CSS styles */}
+      {/* CSS Styles */}
       <style>{`
         .slideshow {
           position: absolute;
@@ -86,26 +97,7 @@ const HeroSection = () => {
         }
 
         .slideshow-image {
-          opacity: 0;
-          animation: slideshow 15s infinite;
-        }
-
-        ${backgroundImages
-          .map(
-            (_, index) => `
-          .slideshow-image:nth-child(${index + 1}) {
-            animation-delay: ${index * 5}s;
-          }
-        `
-          )
-          .join("")}
-
-        @keyframes slideshow {
-          0% { opacity: 0; }
-          20% { opacity: 1; }
-          33.33% { opacity: 1; }
-          53.33% { opacity: 0; }
-          100% { opacity: 0; }
+          transition: opacity 1s ease-in-out;
         }
       `}</style>
     </div>
