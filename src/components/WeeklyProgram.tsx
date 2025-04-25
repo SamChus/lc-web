@@ -1,8 +1,5 @@
-import React from "react";
 import Carousel from "./Carousel";
-import ImageOne from "../assets/p3c.jpg";
-import ImageTwo from "../assets/p6c.jpg";
-import ImageThree from "../assets/p5.jpg";
+
 import Connect from "./Connect";
 
 const WeeklyProgram = () => {
@@ -11,7 +8,10 @@ const WeeklyProgram = () => {
       key={1}
       className="slide relative font-[Poppins] font-semibold h-[425px]"
     >
-      <img src={ImageOne} alt="Slide 2" />
+      <img
+        src="https://res.cloudinary.com/ducmq0ftx/image/upload/v1745418921/lwc/IMG_20250320_164114_569_oeebab.jpg"
+        alt="Slide 2"
+      />
       <div className="absolute p-6 inset-0 flex flex-col h-full justify-between items-start text-white bg-black bg-opacity-50">
         <h3 className="text-left text-xl">
           <span className="text-sm">Discipleship Service</span>
@@ -27,7 +27,11 @@ const WeeklyProgram = () => {
       key={2}
       className="slide relative font-[Poppins] font-semibold h-[425px]"
     >
-      <img src={ImageThree} alt="Slide 2" className="object-cover h-48" />
+      <img
+        src="https://res.cloudinary.com/ducmq0ftx/image/upload/v1745418921/lwc/IMG_20250320_164111_669_tnfbfy.jpg"
+        alt="Slide 2"
+        className="object-cover h-48"
+      />
       <div className="absolute p-6 inset-0 flex flex-col h-full justify-between items-start text-white bg-black bg-opacity-50">
         <h3 className="text-left text-xl">
           <span className="text-sm">Discipleship Service</span>
@@ -43,7 +47,11 @@ const WeeklyProgram = () => {
       key={3}
       className="slide relative font-[Poppins] font-semibold h-[425px]"
     >
-      <img src={ImageTwo} alt="Slide 2" className="object-cover h-48" />
+      <img
+        src="https://res.cloudinary.com/ducmq0ftx/image/upload/v1745418921/lwc/IMG_20250320_164116_283_b8zfkw.jpg"
+        alt="Slide 2"
+        className="object-cover h-48"
+      />
 
       <div className="absolute p-6 inset-0 flex flex-col h-full justify-between items-start text-white bg-black bg-opacity-50">
         <h3 className="text-left text-xl">
@@ -61,7 +69,7 @@ const WeeklyProgram = () => {
     <div className="container mx-auto py-12">
       <h1 className="text-[48px] text-center my-8">Programs</h1>
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
-        <Carousel slides={slides} classname="w-full " fill delay={3000}/>
+        <Carousel slides={slides} classname="w-full " fill delay={3000} />
         <div className="flex flex-col justify-center p-4 lg:w-1/2 lg:p-10">
           <h2 className="text-[#B22E7B] text-[32px] py-3">WEEKLY SERVICES</h2>
           <p className="text-[40px]">THE APOSTOLIC KINGDOM BASED TEACHINGS</p>
