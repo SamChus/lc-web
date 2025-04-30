@@ -13,11 +13,13 @@ const HeroSection = () => {
       text: "To Raise Ambassadors as Kings & Priests For Global And Apostolic Impact.",
     },
     {
-      image: image.pa,
+      image:
+        "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745419579/lwc/1742147326712_dq2dz1.jpg",
       text: "Equipping the Called For His Calling, Irrespective of Background, Expertise Or Academic Discipline.",
     },
     {
-      image: image.papa2,
+      image:
+        "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745422065/lwc/img26_cnrfnh.jpg",
       text: "Raising Kings, Financial Apostles in Business, Education, and Politics.",
     },
   ];

@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -30,8 +29,11 @@ export default function EffectCarousel() {
     "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745421980/lwc/img18_hwui62.jpg",
     "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745421981/lwc/img19_e8yp67.jpg",
     "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745422012/lwc/img25_uqayae.jpg",
+    "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745421938/lwc/img2_h7nrhu.jpg",
+    "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745421938/lwc/img1_kvrtr2.jpg",
+    "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745419140/lwc/FB_IMG_16425025000489947_epvw4j.jpg",
+    "https://res.cloudinary.com/ducmq0ftx/image/upload/v1745421963/lwc/img13_x9ziux.jpg",
   ];
-
 
   return (
     <>
@@ -40,7 +42,7 @@ export default function EffectCarousel() {
         grabCursor={true}
         modules={[EffectCards, Autoplay]}
         autoplay={{ delay: 3000 }}
-        className="h-[500px] w-[280px] mx-auto overflow-hidden"
+        className="h-[500px] w-[280px] mx-auto md:w-1/2 overflow-hidden"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
