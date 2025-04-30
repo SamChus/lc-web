@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -61,8 +61,8 @@ const RegisterForm: React.FC<FormProps<RegisterFormData>> = ({
     resolver: zodResolver(RegisterSchema),
   });
 
-  const form_url =
-    "https://docs.google.com/forms/d/e/1FAIpQLSeYQSt1AKHeHAuiWxId5AxU5PbrtPZrJ19_05L6HoZOW2JxIA/formResponse?usp=pp_url&entry.784470093=2025-04-01&entry.716985034=Samuel+Chukwuma&entry.1587691209=samuelchigo55@gmail.com&entry.512536604=0w19eu9w&entry.352506208=Yes&entry.1080948093=Ph+Branch&entry.1430947383=nil";
+  // const form_url =
+  //   "https://docs.google.com/forms/d/e/1FAIpQLSeYQSt1AKHeHAuiWxId5AxU5PbrtPZrJ19_05L6HoZOW2JxIA/formResponse?usp=pp_url&entry.784470093=2025-04-01&entry.716985034=Samuel+Chukwuma&entry.1587691209=samuelchigo55@gmail.com&entry.512536604=0w19eu9w&entry.352506208=Yes&entry.1080948093=Ph+Branch&entry.1430947383=nil";
 
 
   return (

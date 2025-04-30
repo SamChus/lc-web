@@ -1,5 +1,4 @@
-import React from 'react';
-import Connect from './Connect';
+
 import Carousel from './Carousel';
 
 const LocateBranch = () => {

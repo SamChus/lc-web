@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "./Carousel";
 import ImageOne from "../assets/up1.png";
 import ImageTwo from "../assets/up2.png";

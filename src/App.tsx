@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import WeeklyProgram from "./components/WeeklyProgram";
 import HeroSection from "./components/Hero";
 import ServiceCountdown from "./components/ServiceCountdown";
@@ -8,8 +8,7 @@ import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
 import img4 from "./assets/img4.png";
-import ContactUs from "./components/ContactUs";
-import Footer from "./components/Footer";
+
 import UpcomingEvent from "./components/UpcomingProgram";
 import MinistriesSection from "./components/MinistriesSection";
 import LocateBranch from "./components/LocateBranch";
@@ -29,7 +28,7 @@ function App() {
       <div className="mx-auto">
         {/* NAVIGATION */}
         <HeroSection />
-        {/* <ServiceCountdown /> */}
+        <ServiceCountdown />
         {/* HERO SECTION */}
         {/* COUNTDOWN SECTION */}
         {/* PROGRAMS SECTION */}

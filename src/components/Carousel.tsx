@@ -72,7 +72,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, classname, fill, delay, fil
         onClick={() => swiper.slidePrev()}
       ></div>
 
-      <style jsx>{`
+      <style>{`
         .swiper-button-next,
         .swiper-button-prev {
           position: absolute;
