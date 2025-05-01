@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "./Countdown";
-import Connect from "./Connect";
+
 
 const ServiceCountdown: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
