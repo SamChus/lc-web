@@ -13,6 +13,9 @@ import UpcomingEvent from "./components/UpcomingProgram";
 import MinistriesSection from "./components/MinistriesSection";
 import LocateBranch from "./components/LocateBranch";
 import PresidentSection from "./components/PresidentSection";
+import Sermons from "./components/Sermons";
+import BuildingProject from "./components/BuildingProject";
+import Testimonies from "./components/Testimonies";
 
 function App() {
   const images = [img1, img2, img3, img4];
@@ -49,9 +52,10 @@ function App() {
         <MinistriesSection />
         {/* LOCATE A BRANCH SECTION */}
         <LocateBranch />
-        {/* TESTIMONIES SECTION */}
-        {/* CONTACT US SECTION */}  
-        {/* FOOTER SECTION */}
+        <Sermons />
+        <Testimonies />
+        <BuildingProject />
+       
        
       </div>
   );

@@ -11,10 +11,7 @@ import { useEffect, useState } from "react";
 
 import { cn } from "../lib/utils";
 
-// import ChveronLeftFilled from "../assets/Chevronfill-left.png";
-// import ChveronRightFilled from "../assets/Chevronfill-right.png";
-// import ChveronLeft from "../assets/Chevron-Left.png";
-// import ChveronRight from "../assets/Chevron-Right.png";
+
 
 
 
@@ -85,6 +82,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, classname, fill, delay, fil
           width: 60px;
           color: #fb0e98;
           font-size: 14px;
+          
         }
 
         .swiper-button-next {

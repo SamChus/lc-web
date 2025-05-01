@@ -34,12 +34,12 @@ const WeeklyProgram = () => {
       />
       <div className="absolute p-6 inset-0 flex flex-col h-full justify-between items-start text-white bg-black bg-opacity-50">
         <h3 className="text-left text-xl">
-          <span className="text-sm">Discipleship Service</span>
+          <span className="text-sm">Apostolic (mid -week) Hour Service</span>
           <br />
-          Equipping the called
+          Raising Kingdom Ambassadors
         </h3>
         <p className="text-left text-[15.15px]">
-          Monday <br /> 5PM (WAT)
+          Wednesday <br /> 5PM (WAT)
         </p>
       </div>
     </div>,
@@ -55,9 +55,9 @@ const WeeklyProgram = () => {
 
       <div className="absolute p-6 inset-0 flex flex-col h-full justify-between items-start text-white bg-black bg-opacity-50">
         <h3 className="text-left text-xl">
-          <span className="text-sm">Discipleship Service</span>
+          <span className="text-sm">Sunday Mega Service</span>
           <br />
-          Equipping the called
+          Apostolic Kingdom Service
         </h3>
         <p className="text-left text-[15.15px]">
           Monday <br /> 5PM (WAT)

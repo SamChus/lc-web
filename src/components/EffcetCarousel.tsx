@@ -34,19 +34,23 @@ export default function EffectCarousel() {
 
   return (
     <>
-      <Swiper
+      <div className="h-[500px] w-[320px] mx-auto md:w-1/2 overflow-hidden">
+        <div className="h-full w-full overflow-y-scroll">
+          <Swiper
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards, Autoplay]}
         autoplay={{ delay: 3000 }}
-        className="h-[500px] w-[280px] mx-auto md:w-1/2 overflow-hidden"
-      >
+        className="h-full w-full"
+          >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img src={image} alt={`image-${index}`} className="w-full" />
           </SwiperSlide>
         ))}
-      </Swiper>
+          </Swiper>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import EffectCarousel from "./EffcetCarousel";
+import { Link } from "react-router-dom";
 
 interface AboutCompoProps {
   title: string;
@@ -14,25 +15,28 @@ const AboutSection = ({ title, mission, vision }: AboutCompoProps) => {
         {title}
       </h2>
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="animate-fade-in-left">
           <div>
-            <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-700 mb-4">{mission}</p>
-            <a href="#" className="text-purple-600 font-semibold">
-              Learn More
-            </a>
+        <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
+          Our Mission
+        </h3>
+        <p className="text-gray-700 mb-4">{mission}</p>
+       <Link to="/about" className="text-purple-600 font-semibold">
+          Learn More
+        </Link>
           </div>
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
-              Vision
-            </h3>
-            <p className="text-gray-700 mb-4">{vision}</p>
-            <a href="#" className="text-purple-600 font-semibold">
-              Learn More
-            </a>
-          </div>
+        <h3 className="text-2xl font-semibold text-center text-gray-900 mb-4">
+          Vision
+        </h3>
+        <p className="text-gray-700 mb-4">{vision}</p>
+    
+        <Link to="/about" className="text-purple-600 font-semibold">
+          Learn More
+        </Link>
+         
+        </div>
+  
         </div>
         <EffectCarousel />
       </div>

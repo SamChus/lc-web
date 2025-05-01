@@ -28,7 +28,7 @@ const Connect: React.FC<ConnectProps> = ({ bgColor }) => {
             <div className="absolute left-0 mt-2 w-full bg-white shadow-xl rounded-lg overflow-hidden border border-gray-100 z-50">
               <div className="flex flex-col">
                 <a
-                  href="https://www.youtube.com"
+                  href="https://www.youtube.com/@lightworldairforce2023"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-red-600 transition-colors duration-200"
@@ -43,7 +43,7 @@ const Connect: React.FC<ConnectProps> = ({ bgColor }) => {
                   YouTube
                 </a>
                 <a
-                  href="https://www.facebook.com"
+                  href="facebook.com/lcheadquaters?mibextid=ZbWKwL"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-blue-600 transition-colors duration-200"
