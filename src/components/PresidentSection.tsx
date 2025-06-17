@@ -1,10 +1,10 @@
 export default function PresidentSection() {
   return (
     <section
-      className="w-full relative h-[600px] bg-[#7E3721] text-white overflow-hidden"
+      className="w-full relative h-screen bg-[#7E3721] text-white overflow-hidden"
       style={{
         background:
-          "linear-gradient(90deg, rgba(126, 55, 33, 0) 1.59%, #7E3721 7.16%, #7E3721 84.37%, #7E3721 97.74%)"
+          "linear-gradient(90deg, rgba(126, 55, 33, 0) 1.59%, #7E3721 7.16%, #7E3721 84.37%, #7E3721 97.74%)",
       }}
     >
       {/* Background Image */}
@@ -31,18 +31,31 @@ export default function PresidentSection() {
           </h2>
 
           <p className="text-sm md:text-base font-semibold leading-relaxed text-white mb-8 w-[80%] md:w-[100%]">
-            Francis E.A Onybuchi, is an Apostle with the Prophetic Grace and
-            Teaching Insight. He is the founding-President, The Apostolic
-            Ambassadors Ministries Inc. (A.K.A LightWorld City Christian Center
-            Inc). An Apostolic, Kingdom-Based & Empowering commission with the
-            mandate of “Raising Ambassadors of Generational Relevance by God’s
-            Spirit; In Word, Anointing, Wonders and Grace”. A core
-            Kingdom-discipler, Life Coach and trained human resource development
-            personnel. He is also the International President, International
-            Ambassadors and Ministers Summit (IAMS), which is a breeding ground
-            for raising Apostolic Ambassadors and ministers as Vessels of the
-            last wave. He is the Coach of LeadFaith Resource Consults, which is
-            a global-mentorship & real estate conglomerate.
+            Francis E.A Onyebuchi is an Apostle with the prophetic grace and
+            teaching insights. He is the presiding Bishop of Lightworld City
+            Christian Center Inc (a.k.a. The Empowerment Place International
+            Ministries Inc) which is an Apostolic Kingdom-Based & Empowerment
+            Commission with the Mandate to “Raise Ambassadors as Kings & Priest
+            of generational relevance by his Spirit for a Global & Apostolic
+            Impact, with a network of Churches & Discipleship Hubs across
+            Nigeria. Having been a tool in the hands of the Almighty for more
+            than a decade, His apostolic sessions & systematic teachings with
+            its theological compass have been a tool in the “raising, discipling
+            , equipping, reviving & prophetically empowering the Saints for
+            Ministry and global impacts, accompanied with experiential
+            encounters, healings, signs & wonders amongst others. As an Apostle
+            of Empowerment, He strives daily for the birthing of authentic
+            apostolic discipleship systems and revivals through his “Intentional
+            Ministers Summits (IMS) & Apostolic Builders Networks (ABN) which
+            serve as an interdenominational Apostolic Network for the birthing
+            of end-time kingdom servants as vessels of the last wave, with the
+            Mandate of “equipping the called for their calling through Mandate
+            discovery & fulfilment“. Through his apostolic writs (books) many
+            have been able to find their place in destiny of which he believes
+            is the core to exploits in Life & Ministry. He consults for
+            Ministries, Organizations & Institutions on life coaching,
+            intentional discipleship, mandate analysis, leadership & business,
+            etc. He is married to Precious and blessed with a thriving family.
           </p>
 
           <button className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-[#702d1d] transition duration-300">

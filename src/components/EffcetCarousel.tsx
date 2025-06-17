@@ -1,14 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper/modules";
-
 import "../index.css";
-
-
-// import required modules
 
 export default function EffectCarousel() {
   const images = [
@@ -33,24 +27,22 @@ export default function EffectCarousel() {
   ];
 
   return (
-    <>
-      <div className="h-[500px] w-[320px] mx-auto md:w-1/2 overflow-hidden">
-        <div className="h-full w-full overflow-y-scroll">
-          <Swiper
-        effect={"cards"}
+    <div className="h-[600px] w-[250px] md:w-[400px] mx-auto overflow-hidden">
+      <Swiper
+        effect="cards"
         grabCursor={true}
         modules={[EffectCards, Autoplay]}
         autoplay={{ delay: 3000 }}
+        loop={true}
+        watchSlidesProgress={true}
         className="h-full w-full"
-          >
+      >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img src={image} alt={`image-${index}`} className="w-full" />
           </SwiperSlide>
         ))}
-          </Swiper>
-        </div>
-      </div>
-    </>
+      </Swiper>
+    </div>
   );
 }

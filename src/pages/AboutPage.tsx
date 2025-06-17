@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 const AboutPage = () => {
   const [activeTab, setActiveTab] = useState("apostle");
 
@@ -8,7 +7,7 @@ const AboutPage = () => {
     {
       id: "apostle",
       label: "Apostle Francis E.A Onyebuchi",
-      color: "text-blue-600",
+      color: "text-gray-600",
     },
     { id: "mandate", label: "The Mandate", color: "text-gray-600" },
     { id: "mission", label: "Our Mission & Vision", color: "text-gray-600" },
@@ -22,131 +21,139 @@ const AboutPage = () => {
   const tabContent = {
     apostle: (
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">
+        <h3 className="text-4xl font-semibold mb-4 text-[#8C2ABD]">
           Apostle Francis E.A Onyebuchi
         </h3>
-        <p className="text-gray-600">
-          Francis E.A Onyebuchi, Is an Apostle with the Prophetic Grace and
-          Teaching Insight. He is the founding-President, The Apostolic
-          Ambassadors Ministries Inc. (A.K.A LightWorld City Christian Center
-          Inc). An Apostolic, Kingdom-Based & Empowering commission with the
-          mandate of “Raising Ambassadors of Generational Relevance by God’s
-          Spirit; In Word, Anointing, Wonders and Grace”. He holds a B.Sc. in
-          Surveying and Geo-informatics, from the Nnamdi Azikiwe University,
-          Awka. & B.A in Religious & Cultural Studies, an alumnus of the
-          Assemblies of God Divinity (Bible School) Old Umuahia. A core
-          Kingdom-discipler, Life Coach and trained human resource development
-          personnel. He is also the International President, International
-          Ambassadors and Ministers Summit (IAMS), which is a breeding ground
-          for raising Apostolic Ambassadors and ministers as Vessels of the last
-          wave. He is the Coach of LeadFaith Resource Consults, which is a
-          global-mentorship & real estate conglomerate. Having been a tool in
-          the hand of the Almighty for more than a decade, His Apostolic call
-          and systematic teachings with its theological compass has been a trend
-          tool in the discipleings, transformations, reviving and prophetically
-          empowering the saints for service, accompanied with instant
-          encounters, Healings, signs and wonders. He is a vessel for global &
-          National Transformations and a certified graduate of Leadership
-          Diploma Course (WOFBI). He is happily married to Precious Kosisochukwu
-          Francis-Onyebuchi and they are blessed with a Son, Jason-Daniels and
-          numerous Spiritual Sons & Daughters.
+        <p className="text-gray-700 text-2xl leading-relaxed">
+          Francis E.A Onyebuchi is an Apostle with the prophetic grace and
+          teaching insights. He is the presiding Bishop of Lightworld City
+          Christian Center Inc (a.k.a. The Empowerment Place International
+          Ministries Inc) which is an Apostolic Kingdom-Based & Empowerment
+          Commission with the Mandate to “Raise Ambassadors as Kings & Priest of
+          generational relevance by his Spirit for a Global & Apostolic Impact,
+          with a network of Churches & Discipleship Hubs across Nigeria. Having
+          been a tool in the hands of the Almighty for more than a decade, His
+          apostolic sessions & systematic teachings with its theological compass
+          have been a tool in the “raising, discipling , equipping, reviving &
+          prophetically empowering the Saints for Ministry and global impacts,
+          accompanied with experiential encounters, healings, signs & wonders
+          amongst others. As an Apostle of Empowerment, He strives daily for the
+          birthing of authentic apostolic discipleship systems and revivals
+          through his “Intentional Ministers Summits (IMS) & Apostolic Builders
+          Networks (ABN) which serve as an interdenominational Apostolic Network
+          for the birthing of end-time kingdom servants as vessels of the last
+          wave, with the Mandate of “equipping the called for their calling
+          through Mandate discovery & fulfilment“. Through his apostolic writs
+          (books) many have been able to find their place in destiny of which he
+          believes is the core to exploits in Life & Ministry. He consults for
+          Ministries, Organizations & Institutions on life coaching, intentional
+          discipleship, mandate analysis, leadership & business, etc. He is
+          married to Precious and blessed with a thriving family.
         </p>
       </div>
     ),
     mandate: (
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">The Mandate</h3>
-        <p className="text-gray-600">
-          <strong>THE COMMISSION THREE-FOLD MANDATE</strong>
+        <h3 className="text-4xl font-semibold mb-4 text-[#8C2ABD]">
+          The Mandate
+        </h3>
+        <p className="text-gray-700 text-2xl leading-relaxed">
+          Raising Ambassadors (Apostolic Kingdom-Based Believers) of
+          Generational Relevance by His Spirit; In Word, Anointing, Wonders and
+          Grace; Irrespective of background or educational disciplines, and
+          making them permissible tools in the hand of God for a Global impact
+          and Apostolic impact.
         </p>
-        <p className="text-gray-600">
-          <strong>THE THREE TIERS OF THE COMMISSION'S EMPOWERMENT MANDATE:</strong>
-        </p>
-        <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>
-            <strong>Apostolic Impact Mandate – 21st March 2013:</strong> Raising Ambassadors of Generational Relevance by His Spirit; In Word, Anointing, Wonders, and Grace; Irrespective of background or educational disciplines, and making them permissible tools in the hand of God for a Charismatic and Global impact.
-          </li>
-          <li>
-            <strong>Discipleship-Building Mandate – 21st March 2013:</strong> Equipping the Called For His Calling, Irrespective Of Background, Expertise, Or Academic Discipline – Making Him The Man (A Vessel) God Can Use.
-          </li>
-          <li>
-            <strong>Global Impact / National Transformations Mandate (B.E.P) – 18th September 2017:</strong> Raise Me Kings, Raise Me Financial Apostles In Business, Education, And Politics. Create And Establish Platforms In These Areas For Global Impacts.
-          </li>
-        </ul>
-        <p className="text-gray-600 mt-4">
-          Therefore, in:
-        </p>
-        <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>
-            <strong>Apostolic Impacts Mandate:</strong> We set the pace in ministry through Signs and Wonders.
-          </li>
-          <li>
-            <strong>Discipleship Mandate:</strong> We Raise and Equip Men for Exploits.
-          </li>
-          <li>
-            <strong>Global Impacts Mandate:</strong> We light up the world.
-          </li>
-        </ul>
       </div>
     ),
     mission: (
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">Our Mission & Vision</h3>
-        <p className="text-gray-600">
-          <strong>Mission:</strong> We are called, charged, instructed, and
-          commanded by the Lord to ‘Preach, Teach, Exposit, Testify, Proclaim,
-          Publish, Unveil the APOSTOLIC KINGDOM-BASED MESSAGE of the Lordship of
-          Jesus Christ and His Kingdom here on earth and beyond the earth. This
-          is the key to raising Apostolic Kingdom-based believers, as we
-          acknowledge the testimony of our Lord Jesus Christ as the Spirit of
-          Prophecy, according to Luke 4:17-19, Acts 2:41-47, John 1:1-5, 1 John
-          1:1-4, 1 Cor 2:4-5, Acts 5:12-16, Acts 2:14-47, Rev 19:10.
-          <br />
-          <strong>Vision:</strong>
-          <ul className="list-disc ml-6 mt-2">
-            <li>
-              Teaching and empowering students from the Word and academic
-              discipline.
-            </li>
-            <li>
-              Raising and building indomitable Bible scholars, teachers, and
-              ministers of the Word irrespective of their academic discipline.
-            </li>
-            <li>
-              Building capacity, re-ordering corrupted social values, and
-              positioning youths to Christ.
-            </li>
-            <li>
-              Lending and impacting creative support to the urgent need of
-              rediscovering the identity and place of youths in the church as
-              the fire and force of evangelism.
-            </li>
-            <li>
-              Raising worthy ambassadors who are sound in academics and
-              excellent in wisdom.
-            </li>
-            <li>
-              Unlocking the leadership potential in youths that will help them
-              throughout their lives.
-            </li>
-          </ul>
-        </p>
+        <h3 className="text-4xl font-semibold mb-4 text-[#8C2ABD]">
+          Our Mission & Vision
+        </h3>
+
+        <ol className="list-decimal ml-6 space-y-4 text-gray-700 text-2xl leading-relaxed">
+          <li>
+            <span className="">
+              Preaching the Apostolic Kingdom-Based message
+            </span>{" "}
+            for the empowerment of mankind across the nations of the earth and
+            administering the revealed truths and mysteries of the kingdom
+            in-line with the Apostolic order as delivered to this commission.
+          </li>
+          <li>
+            <span className="">
+              Planting of full gospel Apostolic Kingdom-Based and Charismatic
+              Churches
+            </span>{" "}
+            to be known as{" "}
+            <span className="font-bold">
+              LIGHTWORLD CITY CHRISTIAN CENTER & THE EMPOWERMENT PLACE
+              INTERNATIONAL MINISTRY WORLDWIDE
+            </span>{" "}
+            across the nations of the earth.
+          </li>
+          <li>
+            <span className="">Equipping the called for his calling</span>;
+            making him an apostolic vessel God can use through the establishing
+            of Global Discipleship Systems (GDS), Ministerial and leadership
+            institutions for the raising and empowering of kingdom giants for
+            the fulfilments of their apostolic and global callings across the
+            seven (7) world continents.
+          </li>
+          <li>
+            <span className="">Reviving the elects</span> through the word of
+            possibilities, anointing and edification in Christ Jesus through the
+            instrumentality of Global missions and sending missionaries to all
+            nations of the earth and into all works of life for the full
+            redemption of the total man unto dignity in Christ.
+          </li>
+          <li>
+            <span className="">
+              Prophetically teaching and aligning the believer
+            </span>{" "}
+            on the present moves of God, making him relevant for kingdom
+            advancement projects and establishing his faith in holiness in
+            preparation of the Lord's coming which is heaven at last.
+          </li>
+          <li>
+            <span className="">
+              Spreading and Heralding the values of the gospel
+            </span>{" "}
+            through the establishment of educational, business & leadership
+            institutional systems at all levels and encouraging the studying,
+            understanding and practical application of the revealed bible truth
+            for exploits in everyday life through scriptural, systematic and
+            scientific discoveries.
+          </li>
+          <li>
+            <span className="">
+              Promoting and Caring for the wellbeing of humanity
+            </span>{" "}
+            through charity endeavors globally.
+          </li>
+          <li>
+            <span className="">
+              Publishing of the Apostolic Kingdom-Based principled teachings and
+              beliefs
+            </span>{" "}
+            in furtherance of the Empowerment Mandate.
+          </li>
+        </ol>
       </div>
     ),
     message: (
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">
+        <h3 className="text-4xl font-semibold mb-4 text-[#8C2ABD]">
           The LightWorld City Message
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-700 text-2xl leading-relaxed">
           We are called, charged, instructed and commanded by the Lord to
-          ‘Preach, Teach, Exposit, Testify, Proclaim, Publish, Unveil the
-          APOSTOLIC KINGDOM-BASED MESSAGE of the Lordship of Jesus Christ and
-          His Kingdom Here on earth and Beyond the earth for that is the key for
-          the raising of the Apostolic Kingdom-based believers, as We
-          acknowledge the testimony of our Lord Jesus Christ as the Spirit of
-          Prophecy, according to Luke 4:17-19, Acts 2:41-47, John 1:1-5, 1john
-          1:1-4, 1Cor 2:4-5, Acts 5:12-16, Acts 2:14-47, Rev 19:10.
+          <span className="font-semibold"> Preach, Teach, Exposit, Testify, Proclaim, Publish, Unveil </span>
+          the <span className="font-bold">APOSTOLIC KINGDOM-BASED MESSAGE</span> of the Lordship of Jesus Christ and
+          His Kingdom here on earth and beyond. This is the key for
+          raising Apostolic Kingdom-based believers, as we acknowledge the testimony of our Lord Jesus Christ as the Spirit of
+          Prophecy, according to <span className="italic">Luke 4:17-19, Acts 2:41-47, John 1:1-5, 1 John 1:1-4, 1 Cor 2:4-5, Acts 5:12-16, Acts 2:14-47, Rev 19:10</span>.
         </p>
       </div>
     ),
@@ -238,6 +245,5 @@ const AboutPage = () => {
     </div>
   );
 };
-
 
 export default AboutPage;
