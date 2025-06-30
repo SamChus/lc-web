@@ -6,33 +6,34 @@ import FormField from "./FormField";
 
 // Zod Schemas for each form
 const RegisterSchema = z.object({
-  fullName: z.string().min(1, 'Full Name is required'),
-  email: z.string().email('Invalid email address').min(1, 'Email is required'),
-  phoneNumber: z.string().min(1, 'Phone Number is required'),
-  isMember: z.enum(['Yes', 'No']),
+  fullName: z.string().min(1, "Full Name is required"),
+  email: z.string().email("Invalid email address").min(1, "Email is required"),
+  phoneNumber: z.string().min(1, "Phone Number is required"),
+  isMember: z.enum(["Yes", "No"]),
   branch: z.string().optional(),
   location: z.string().optional(),
+  program: z.enum(["IAMS", "APOSTOLIC CONVENTION", "GOSHEN", "IMS"]),
 });
 
 const TestimoniesSchema = z.object({
-  fullName: z.string().min(1, 'Full Name is required'),
-  email: z.string().email('Invalid email address').min(1, 'Email is required'),
-  testimony: z.string().min(1, 'Testimony is required'),
-  canShare: z.enum(['Yes', 'No']),
+  fullName: z.string().min(1, "Full Name is required"),
+  email: z.string().email("Invalid email address").min(1, "Email is required"),
+  testimony: z.string().min(1, "Testimony is required"),
+  canShare: z.enum(["Yes", "No"]),
 });
 
 const RequestPrayerSchema = z.object({
   fullName: z.string().optional(),
-  email: z.string().email('Invalid email address').optional(),
-  prayerRequest: z.string().min(1, 'Prayer Request is required'),
-  urgency: z.enum(['Urgent', 'Moderate', 'Not Urgent']),
+  email: z.string().email("Invalid email address").optional(),
+  prayerRequest: z.string().min(1, "Prayer Request is required"),
+  urgency: z.enum(["Urgent", "Moderate", "Not Urgent"]),
 });
 
 const FirstTimeWorshipperSchema = z.object({
-  fullName: z.string().min(1, 'Full Name is required'),
-  email: z.string().email('Invalid email address').min(1, 'Email is required'),
-  phoneNumber: z.string().min(1, 'Phone Number is required'),
-  howHeard: z.enum(['Friend/Family', 'Social Media', 'Website', 'Other']),
+  fullName: z.string().min(1, "Full Name is required"),
+  email: z.string().email("Invalid email address").min(1, "Email is required"),
+  phoneNumber: z.string().min(1, "Phone Number is required"),
+  howHeard: z.enum(["Friend/Family", "Social Media", "Website", "Other"]),
   specialRequests: z.string().optional(),
 });
 
@@ -61,15 +62,16 @@ const RegisterForm: React.FC<FormProps<RegisterFormData>> = ({
     resolver: zodResolver(RegisterSchema),
   });
 
+  // result() // Removed because 'result' is not a function
+
   // const form_url =
   //   "https://docs.google.com/forms/d/e/1FAIpQLSeYQSt1AKHeHAuiWxId5AxU5PbrtPZrJ19_05L6HoZOW2JxIA/formResponse?usp=pp_url&entry.784470093=2025-04-01&entry.716985034=Samuel+Chukwuma&entry.1587691209=samuelchigo55@gmail.com&entry.512536604=0w19eu9w&entry.352506208=Yes&entry.1080948093=Ph+Branch&entry.1430947383=nil";
-
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <p className="text-center text-gray-700 mb-6">{title}</p>
       <div className="space-y-4">
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
           <div className="flex-1">
             <FormField
               label="Full Name"
@@ -90,7 +92,7 @@ const RegisterForm: React.FC<FormProps<RegisterFormData>> = ({
             />
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
           <div className="flex-1">
             <FormField
               label="Phone Number"
@@ -111,12 +113,20 @@ const RegisterForm: React.FC<FormProps<RegisterFormData>> = ({
             />
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
           <div className="flex-1">
             <FormField
               label="If yes, what branch / campus?"
               placeholder="Select branch"
-              options={["Select branch"]}
+              options={[
+                "Select branch",
+                "Port Harcourt",
+                "Umuahia",
+                "Enugu",
+                "Asaba",
+                "Agbor",
+                "Abakaliki",
+              ]}
               name="branch"
               register={register}
               error={errors.branch?.message}
@@ -131,6 +141,22 @@ const RegisterForm: React.FC<FormProps<RegisterFormData>> = ({
               error={errors.location?.message}
             />
           </div>
+        </div>
+        <div className="flex-1">
+          <FormField
+            label="Which program are you registering for?"
+            placeholder="Select program"
+            options={[
+              "Select program",
+              "IAMS",
+              "APOSTOLIC CONVENTION",
+              "GOSHEN",
+              "IMS",
+            ]}
+            name="program"
+            register={register}
+            error={errors.program?.message}
+          />
         </div>
         <button
           type="submit"
@@ -358,54 +384,71 @@ const ProgramForm: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
-      <div className="">
-      <h1 className="text-2xl font-bold text-center mb-6">Forms</h1>
+    <div className="">
+      {/* Header Section with Black Background */}
 
-      <div className="flex justify-around border-b mb-6">
-        {tabs.map((tab) => (
-        <button
-          key={tab}
-          className={`py-2 px-4 text-sm font-medium ${
-          activeTab === tab
-            ? "text-purple-600 border-b-2 border-purple-600"
-            : "text-gray-600"
-          } hover:text-purple-600 transition-colors`}
-          onClick={() => setActiveTab(tab)}
-        >
-          {tab}
-        </button>
-        ))}
-      </div>
+      {/* Form Container */}
+      <div className="mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
+            Please provide your details
+          </h2>
 
-      <div className="max-w-full sm:w-[600px] mx-auto h-auto sm:h-[500px]">
-        <div className="transition-opacity duration-300">
-        {activeTab === "Register" && (
-          <RegisterForm
-          title="Welcome! Thank you for your interest in IAMS 2025. Please fill out the form below with accurate details."
-          onSubmit={handleSubmit("Register Form")}
-          />
-        )}
-        {activeTab === "Testimonies" && (
-          <TestimoniesForm
-          title="Share your testimony with us! We’d love to hear how God has worked in your life."
-          onSubmit={handleSubmit("Testimonies Form")}
-          />
-        )}
-        {activeTab === "Request Prayer" && (
-          <RequestPrayerForm
-          title="We’re here to pray for you! Please provide your prayer request details below."
-          onSubmit={handleSubmit("Request Prayer Form")}
-          />
-        )}
-        {activeTab === "First Time Worshipper" && (
-          <FirstTimeWorshipperForm
-          title="Welcome, first-time worshipper! We’re excited to have you with us. Please fill out the form below."
-          onSubmit={handleSubmit("First Time Worshipper Form")}
-          />
-        )}
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8 border-b border-gray-200">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                className={`py-3 px-4 text-sm font-medium rounded-t-lg transition-all duration-200 border-b-2 ${
+                  activeTab === tab
+                    ? "border-purple-600 text-purple-600"
+                    : "border-transparent text-gray-600 hover:text-purple-600"
+                }`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Form Content */}
+          <div className="w-full">
+            <div className="transition-all duration-300 ease-in-out">
+              {activeTab === "Register" && (
+                <div className="animate-fadeIn">
+                  <RegisterForm
+                    title="Welcome! Thank you for your interest. Please fill out the form below with accurate details."
+                    onSubmit={handleSubmit("Register Form")}
+                  />
+                </div>
+              )}
+              {activeTab === "Testimonies" && (
+                <div className="animate-fadeIn">
+                  <TestimoniesForm
+                    title="Share your testimony with us! We'd love to hear how God has worked in your life."
+                    onSubmit={handleSubmit("Testimonies Form")}
+                  />
+                </div>
+              )}
+              {activeTab === "Request Prayer" && (
+                <div className="animate-fadeIn">
+                  <RequestPrayerForm
+                    title="We're here to pray for you! Please provide your prayer request details below."
+                    onSubmit={handleSubmit("Request Prayer Form")}
+                  />
+                </div>
+              )}
+              {activeTab === "First Time Worshipper" && (
+                <div className="animate-fadeIn">
+                  <FirstTimeWorshipperForm
+                    title="Welcome, first-time worshipper! We're excited to have you with us. Please fill out the form below."
+                    onSubmit={handleSubmit("First Time Worshipper Form")}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

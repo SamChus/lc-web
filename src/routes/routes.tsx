@@ -7,13 +7,14 @@ import GivingPage from "../pages/GivingPage";
 
 import TestimoniesPage from "../pages/TestimoniesPage";
 import AboutPage from "../pages/AboutPage";
+// import Sermons from "../pages/Sarmons";
 
 const navLinks = [
     { path: "/", element: <App /> }, // Home component
     { path: "/programs", element: <Programs /> }, // Programs component
     { path: "/about", element: <AboutPage /> }, // About component
     { path: "/ministries", element: "Ministries" },
-    { path: "/sermons", element: "Sermons" },
+    // { path: "/sermons", element: <Sermons /> }, 
     { path: "/give", element: <GivingPage /> }, // Giving component
     { path: "/testimonies", element: <TestimoniesPage /> }, // Testimonies component
     {path: "/livestream", element: "Livestream"},

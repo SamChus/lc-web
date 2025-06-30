@@ -16,6 +16,12 @@ import PresidentSection from "./components/PresidentSection";
 import Sermons from "./components/Sermons";
 import BuildingProject from "./components/BuildingProject";
 import Testimonies from "./components/Testimonies";
+// import Airtable from "airtable";
+
+// const base = new Airtable({
+//   apiKey: import.meta.env.VITE_AIRTABLE_API_KEY,
+// }).base(import.meta.env.VITE_AIRTABLE_BASE);
+
 
 function App() {
   const images = [img1, img2, img3, img4];

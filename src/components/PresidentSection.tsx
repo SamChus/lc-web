@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
+
 export default function PresidentSection() {
   return (
     <section
-      className="w-full relative h-screen bg-[#7E3721] text-white overflow-hidden"
+      className="w-full relative h-[600px] md:h-screen bg-[#7E3721] text-white overflow-hidden"
       style={{
         background:
           "linear-gradient(90deg, rgba(126, 55, 33, 0) 1.59%, #7E3721 7.16%, #7E3721 84.37%, #7E3721 97.74%)",
       }}
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 ">
         <img
           src="https://res.cloudinary.com/ducmq0ftx/image/upload/v1745418921/lwc/IMG_20250320_164123_678_dhncix.jpg" // Replace with your actual image path
           alt="President Francis E.A Onybuchi"
@@ -30,7 +32,7 @@ export default function PresidentSection() {
             <span className="relative z-10">Meet Our President</span>
           </h2>
 
-          <p className="text-sm md:text-base font-semibold leading-relaxed text-white mb-8 w-[80%] md:w-[100%]">
+          <p className="h-[390px] overflow-hidden md:overflow-visible md:h-auto text-sm md:text-base font-semibold leading-relaxed text-white mb-8 w-[80%] md:w-[100%]">
             Francis E.A Onyebuchi is an Apostle with the prophetic grace and
             teaching insights. He is the presiding Bishop of Lightworld City
             Christian Center Inc (a.k.a. The Empowerment Place International
@@ -58,9 +60,12 @@ export default function PresidentSection() {
             etc. He is married to Precious and blessed with a thriving family.
           </p>
 
-          <button className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-[#702d1d] transition duration-300">
+          <Link
+            to="/about"
+            className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-[#702d1d] transition duration-300 inline-block"
+          >
             LEARN MORE
-          </button>
+          </Link>
         </div>
       </div>
     </section>

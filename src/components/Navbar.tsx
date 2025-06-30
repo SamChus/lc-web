@@ -14,10 +14,10 @@ const Navbar: FC<NavLinkProps> = ({ type }) => {
     { path: "/", label: "Home" },
     { path: "/programs", label: "Programs" },
     { path: "/about", label: "About" },
-    { path: "/ministries", label: "Ministries" },
-    { path: "/sermons", label: "Sermons" },
+    // { path: "/ministries", label: "Ministries" },
+    // { path: "/sermons", label: "Sermons" },
     { path: "/give", label: "Give Online" },
-    { path: "/contact", label: "Contact Us" },
+    // { path: "/contact", label: "Contact Us" },
   ];
 
   return (

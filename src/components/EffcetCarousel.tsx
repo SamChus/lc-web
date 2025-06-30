@@ -27,7 +27,7 @@ export default function EffectCarousel() {
   ];
 
   return (
-    <div className="h-[600px] w-[250px] md:w-[400px] mx-auto overflow-hidden">
+    <div className="h-[600px] w-[350px] md:w-[400px] mx-auto overflow-hidden">
       <Swiper
         effect="cards"
         grabCursor={true}

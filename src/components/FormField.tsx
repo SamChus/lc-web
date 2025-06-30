@@ -1,42 +1,39 @@
-import { ChangeEvent } from "react";
+import { UseFormRegister, FieldPath } from "react-hook-form";
 
-
-interface FormFieldProps {
+interface FormFieldProps<T extends Record<string, any>> {
   label: string;
   placeholder: string;
-  type?: "text" | "email" | "textarea";
-  rows?: number;
-  options?: string[];
-  name: string;
-  register: any;
+  name: FieldPath<T>;
+  register: UseFormRegister<T>;
   error?: string;
-  onChange?: (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => void;
+  type?: "text" | "email" | "tel" | "textarea";
+  options?: string[];
+  rows?: number;
 }
 
-const FormField: React.FC<FormFieldProps> = ({
+const FormField = <T extends Record<string, any>>({
   label,
   placeholder,
-  type = "text",
-  rows,
-  options,
   name,
   register,
   error,
-  onChange,
-}) => {
+  type = "text",
+  options,
+  rows = 3,
+}: FormFieldProps<T>) => {
+  const baseClasses =
+    "w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200";
+
   return (
-    <div>
-      <label className="block text-sm font-medium text-gray-700">{label}</label>
+    <div className="w-full">
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        {label}
+      </label>
+
       {options ? (
-        <select
-          {...register(name)}
-          className="mt-1 w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
-          onChange={onChange}
-        >
+        <select {...register(name)} className={baseClasses}>
           {options.map((option, index) => (
-            <option key={index} value={option}>
+            <option key={index} value={index === 0 ? "" : option}>
               {option}
             </option>
           ))}
@@ -45,23 +42,21 @@ const FormField: React.FC<FormFieldProps> = ({
         <textarea
           {...register(name)}
           placeholder={placeholder}
-          className="mt-1 w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
           rows={rows}
-          onChange={onChange}
+          className={baseClasses}
         />
       ) : (
         <input
           {...register(name)}
           type={type}
           placeholder={placeholder}
-          className="mt-1 w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
-          onChange={onChange}
+          className={baseClasses}
         />
       )}
-      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+
+      {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
     </div>
   );
 };
-
 
 export default FormField;
