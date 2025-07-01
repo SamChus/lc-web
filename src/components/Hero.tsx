@@ -10,7 +10,7 @@ const HeroSection = () => {
   const slides = [
     {
       image: image.papaimg,
-      text: "To Raise Ambassadors as Kings & Priests For Global And Apostolic Impact.",
+      text: "To Raise Ambassadors as Kings & Priests For Global & Apostolic Impact.",
     },
     {
       image:

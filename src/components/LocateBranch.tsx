@@ -36,8 +36,7 @@ const LocateBranch = () => {
       <div className="flex flex-col justify-between items-start text-black px-4">
         <h3 className="text-xl md:text-2xl my-2">LC Umuahia</h3>
         <p className="text-xs md:text-sm">
-          Plot 373 Ikwerre Road, Market Junction Mile 4 Rumueme, Portharcourt
-          City, Rivers State, Nigeria. Port Harcourt, Nigeria
+          Plot 10 Elder Biety Nwanju Street, Isieke-Housing Estate, Umuahia, Abia State
         </p>
       </div>
     </div>,
@@ -55,8 +54,7 @@ const LocateBranch = () => {
       <div className="flex flex-col justify-between items-start text-black px-4">
         <h3 className="text-xl md:text-2xl my-2">LC Enugu</h3>
         <p className="text-xs md:text-sm">
-          Plot 373 Ikwerre Road, Market Junction Mile 4 Rumueme, Portharcourt
-          City, Rivers State, Nigeria. Port Harcourt, Nigeria
+         King Ray Plaza, Dunamis Road Beside New Artisan Market Premier Layout, Enugu
         </p>
       </div>
     </div>,
@@ -74,8 +72,7 @@ const LocateBranch = () => {
       <div className="flex flex-col justify-between items-start text-black px-4">
         <h3 className="text-xl md:text-2xl my-2">LC Asaba</h3>
         <p className="text-xs md:text-sm">
-          Plot 373 Ikwerre Road, Market Junction Mile 4 Rumueme, Portharcourt
-          City, Rivers State, Nigeria. Port Harcourt, Nigeria
+           Asaba, Delta State
         </p>
       </div>
     </div>,
