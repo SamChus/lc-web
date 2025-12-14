@@ -1,20 +1,24 @@
 import Carousel from "./Carousel";
-import ImageOne from "../assets/up1.png";
-import ImageTwo from "../assets/up2.png";
-import ImageThree from "../assets/up3.png";
+// import ImageOne from "../assets/up1.png";
+// import ImageTwo from "../assets/up2.png";
+// import ImageThree from "../assets/up3.png";
+import img from "../assets/goshen.jpeg"
 import { Link } from "react-router-dom";
 
 const UpcomingEvent = () => {
   const slides = [
     <div key={1} className="slide h-[456px]">
-      <img src={ImageOne} alt="Slide 1" />
+      <img src={img} alt="Slide 1" />
     </div>,
-    <div key={2} className="slide h-[456px]">
-      <img src={ImageTwo} alt="Slide 2" />
-    </div>,
-    <div key={3} className="slide h-[456px]">
-      <img src={ImageThree} alt="Slide 3" />
-    </div>,
+    // <div key={2} className="slide h-[456px]">
+    //   <img src={ImageOne} alt="Slide 2" />
+    // </div>,
+    // <div key={3} className="slide h-[456px]">
+    //   <img src={ImageTwo} alt="Slide 3" />
+    // </div>,
+    // <div key={4} className="slide h-[456px]">
+    //   <img src={ImageThree} alt="Slide 4" />
+    // </div>,
   ];
   return (
     <div className="container mx-auto">
