@@ -1,13 +1,16 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 
 import WeeklyProgram from "./components/WeeklyProgram";
 import HeroSection from "./components/Hero";
 import ServiceCountdown from "./components/ServiceCountdown";
 import AboutSection from "./components/AboutSection";
+import ProgramPopup from "./components/ProgramPopup";
 import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
 import img4 from "./assets/img4.png";
+import img from "./assets/goshen.jpeg"
 
 import UpcomingEvent from "./components/UpcomingProgram";
 import MinistriesSection from "./components/MinistriesSection";
@@ -25,6 +28,35 @@ import Testimonies from "./components/Testimonies";
 
 function App() {
   const images = [img1, img2, img3, img4];
+  const [showPopup, setShowPopup] = useState(false);
+  const [hasShownPopup, setHasShownPopup] = useState(false);
+
+  // Sample program data - you can replace this with real data
+  const upcomingProgram = {
+    title: "GOSHEN CAMP MEETING 2025",
+    subtitle: "UPCOMING PROGRAM",
+    date: "2025-12-27T16:00:00", // Christmas Day, 5 PM
+    time: "4:00 PM (WAT)",
+    image: img,
+    description: "Join us for our annual Goshen Camp Meeting. Experience powerful worship, transformative teaching, and divine encounters.",
+  };
+
+  // Show popup 2 seconds after page load (only once)
+  useEffect(() => {
+    if (!hasShownPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        setHasShownPopup(true);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [hasShownPopup]);
+
+  const handleClosePopup = () => {
+    console.log("Close button clicked!"); // Debug log
+    setShowPopup(false);
+  };
 
   const mission =
     "Raising Ambassadors (Apostolic Kingdom-Based Believers) of Generational Relevance by His Spirit; In Word, Anointing, Wonders and Grace; Irrespective of background or educational disciplines, and making them permissible tools in the hand of God for a Global impact and Apostolic impact.";
@@ -40,36 +72,43 @@ function App() {
 
   return (
 
-      <div className="mx-auto">
-        {/* NAVIGATION */}
-        <HeroSection />
-        <ServiceCountdown />
-        {/* HERO SECTION */}
-        {/* COUNTDOWN SECTION */}
-        {/* PROGRAMS SECTION */}
-        {/* WEEKLY PROGRAM SECTION */}
-        <WeeklyProgram />
-        {/* EVENTS SECTION */}
-        <UpcomingEvent />
-        {/* ABOUT SECTION */}
-        <AboutSection
-          title="About"
-          mission={mission}
-          vision={vision}
-          images={images}
-        />
-        {/* MEET OUR PRESIDENT SECTION */}
-        <PresidentSection />
-        {/* MINISTRIES SECTION */}
-        <MinistriesSection />
-        {/* LOCATE A BRANCH SECTION */}
-        <LocateBranch />
-        <Sermons />
-        <Testimonies />
-        <BuildingProject />
-       
-       
-      </div>
+    <div className="mx-auto">
+      {/* Program Popup */}
+      <ProgramPopup
+        isOpen={showPopup}
+        onClose={handleClosePopup}
+        program={upcomingProgram}
+      />
+
+      {/* NAVIGATION */}
+      <HeroSection />
+      <ServiceCountdown />
+      {/* HERO SECTION */}
+      {/* COUNTDOWN SECTION */}
+      {/* PROGRAMS SECTION */}
+      {/* WEEKLY PROGRAM SECTION */}
+      <WeeklyProgram />
+      {/* EVENTS SECTION */}
+      <UpcomingEvent />
+      {/* ABOUT SECTION */}
+      <AboutSection
+        title="About"
+        mission={mission}
+        vision={vision}
+        images={images}
+      />
+      {/* MEET OUR PRESIDENT SECTION */}
+      <PresidentSection />
+      {/* MINISTRIES SECTION */}
+      <MinistriesSection />
+      {/* LOCATE A BRANCH SECTION */}
+      <LocateBranch />
+      <Sermons />
+      <Testimonies />
+      <BuildingProject />
+
+
+    </div>
   );
 }
 
