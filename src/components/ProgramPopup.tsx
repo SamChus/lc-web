@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface ProgramPopupProps {
     isOpen: boolean;
@@ -182,9 +183,12 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                     </div>
 
                     {/* Action Button */}
-                    {/* <button className="w-full bg-gradient-to-r from-[#9C1FDB] to-[#B22E7B] text-white py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
+                    {/* <Link
+                        to="/minister-summit-registration"
+                        className="block w-full bg-gradient-to-r from-[#9C1FDB] to-[#B22E7B] text-white py-4 rounded-lg font-semibold text-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+                    >
                         Register Now
-                    </button> */}
+                    </Link> */}
                 </div>
             </div>
         </div>
