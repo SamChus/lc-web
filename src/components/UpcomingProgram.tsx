@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 // import ImageOne from "../assets/up1.png";
 // import ImageTwo from "../assets/up2.png";
 // import ImageThree from "../assets/up3.png";
-import img from "../assets/goshen.jpeg"
+import img from "../assets/ims.jpg"
 import { Link } from "react-router-dom";
 
 const UpcomingEvent = () => {
@@ -30,7 +30,7 @@ const UpcomingEvent = () => {
           <p className="text-gray-600 mb-6">Join us for powerful worship, transformative teaching, and divine encounters</p>
           <div className="flex flex-col gap-3">
             <Link
-              to="/minister-summit-registration"
+              to="https://docs.google.com/forms/d/e/1FAIpQLSeV4qYOPu92DyNLVLVIO7yOwTJwNFLkzqBKaO0g76kx5kqBrA/viewform"
               className="w-full max-w-[320px] bg-gradient-to-r from-[#9C1FDB] to-[#B22E7B] text-white px-8 py-4 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               REGISTER FOR MINISTERS' SUMMIT (IMS)

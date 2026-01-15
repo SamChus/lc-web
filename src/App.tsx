@@ -10,7 +10,7 @@ import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
 import img4 from "./assets/img4.png";
-import img from "./assets/goshen.jpeg"
+import img from "./assets/ims.jpg"
 
 import UpcomingEvent from "./components/UpcomingProgram";
 import MinistriesSection from "./components/MinistriesSection";
@@ -33,12 +33,13 @@ function App() {
 
   // Sample program data - you can replace this with real data
   const upcomingProgram = {
-    title: "GOSHEN CAMP MEETING 2025",
+    title: "INTENTIONAL MINISTER SUBMITSION (IMS)",
     subtitle: "UPCOMING PROGRAM",
-    date: "2025-12-27T16:00:00", // Christmas Day, 5 PM
-    time: "4:00 PM (WAT)",
+    date: "2026-01-27T16:30:00", // January 27th, 4:30 PM
+    time: "4:30 PM (WAT)",
     image: img,
-    description: "Join us for our annual Goshen Camp Meeting. Experience powerful worship, transformative teaching, and divine encounters.",
+    description: "Join us for our Intentional Minister Submission (IMS). Experience transformative teaching, and divine encounters.",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSeV4qYOPu92DyNLVLVIO7yOwTJwNFLkzqBKaO0g76kx5kqBrA/viewform",
   };
 
   // Show popup 2 seconds after page load (only once)

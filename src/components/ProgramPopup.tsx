@@ -11,6 +11,7 @@ interface ProgramPopupProps {
         time: string;
         image: string;
         description?: string;
+        link?: string;
     };
 }
 
@@ -52,11 +53,11 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70 animate-fadeIn"
+            className="fixed inset-0 z-50 flex items-center justify-center py-4 px-2 sm:py-8 md:py-12 sm:px-4 bg-black bg-opacity-70 animate-fadeIn overflow-y-auto"
             onClick={onClose}
         >
             <div
-                className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden transform transition-all animate-slideUp"
+                className="relative bg-white rounded-xl sm:rounded-2xl shadow-2xl max-w-2xl w-full overflow-y-auto transform transition-all animate-slideUp my-auto max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] md:max-h-[calc(100vh-6rem)]"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Close Button */}
@@ -66,11 +67,11 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                         e.stopPropagation();
                         onClose();
                     }}
-                    className="absolute top-4 right-4 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all duration-300 hover:scale-110 shadow-lg"
+                    className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 sm:p-2 transition-all duration-300 hover:scale-110 shadow-lg"
                     aria-label="Close popup"
                 >
                     <svg
-                        className="w-6 h-6 text-gray-800"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -85,7 +86,7 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                 </button>
 
                 {/* Program Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-40 sm:h-52 md:h-64 overflow-hidden mt-10 sm:mt-14 md:mt-20">
                     <img
                         src={program.image}
                         alt={program.title}
@@ -95,42 +96,42 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
+                <div className="p-4 sm:p-6 md:p-8">
                     {/* Program Title */}
-                    <div className="mb-6">
-                        <p className="text-sm uppercase tracking-wider text-[#B22E7B] font-semibold mb-2">
+                    <div className="mb-4 sm:mb-6">
+                        <p className="text-xs sm:text-sm uppercase tracking-wider text-[#B22E7B] font-semibold mb-1 sm:mb-2">
                             {program.subtitle}
                         </p>
-                        <h2 className="text-3xl font-bold text-gray-800 mb-3">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 sm:mb-3">
                             {program.title}
                         </h2>
                         {program.description && (
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                                 {program.description}
                             </p>
                         )}
                     </div>
 
                     {/* Countdown Timer */}
-                    <div className="mb-6">
-                        <h3 className="text-center text-sm uppercase tracking-wider text-gray-500 mb-4 font-semibold">
+                    <div className="mb-4 sm:mb-6">
+                        <h3 className="text-center text-xs sm:text-sm uppercase tracking-wider text-gray-500 mb-2 sm:mb-3 font-semibold">
                             Countdown to Program
                         </h3>
-                        <div className="grid grid-cols-4 gap-3">
+                        <div className="grid grid-cols-4 gap-1 sm:gap-2">
                             {[
                                 { value: timeLeft.days, label: "Days" },
                                 { value: timeLeft.hours, label: "Hours" },
-                                { value: timeLeft.minutes, label: "Minutes" },
-                                { value: timeLeft.seconds, label: "Seconds" },
+                                { value: timeLeft.minutes, label: "Mins" },
+                                { value: timeLeft.seconds, label: "Secs" },
                             ].map((unit, index) => (
                                 <div
                                     key={index}
-                                    className="bg-gradient-to-br from-[#9C1FDB] to-[#B22E7B] rounded-xl p-4 text-white text-center shadow-lg transform transition-all hover:scale-105"
+                                    className="bg-gradient-to-br from-[#9C1FDB] to-[#B22E7B] rounded-md sm:rounded-lg p-1.5 sm:p-2 text-white text-center shadow-lg transform transition-all hover:scale-105"
                                 >
-                                    <div className="text-3xl font-bold mb-1">
+                                    <div className="text-base sm:text-lg md:text-xl font-bold mb-0.5">
                                         {unit.value.toString().padStart(2, "0")}
                                     </div>
-                                    <div className="text-xs uppercase tracking-wide opacity-90">
+                                    <div className="text-[10px] sm:text-xs uppercase tracking-wide opacity-90">
                                         {unit.label}
                                     </div>
                                 </div>
@@ -139,11 +140,11 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                     </div>
 
                     {/* Date & Time Info */}
-                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                        <div className="flex items-center justify-center gap-6 text-gray-700">
+                    <div className="bg-gray-50 rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-gray-700">
                             <div className="flex items-center gap-2">
                                 <svg
-                                    className="w-5 h-5 text-[#B22E7B]"
+                                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#B22E7B]"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -155,7 +156,7 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                     />
                                 </svg>
-                                <span className="font-medium">
+                                <span className="text-sm sm:text-base font-medium">
                                     {new Date(program.date).toLocaleDateString("en-US", {
                                         month: "long",
                                         day: "numeric",
@@ -165,7 +166,7 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                             </div>
                             <div className="flex items-center gap-2">
                                 <svg
-                                    className="w-5 h-5 text-[#B22E7B]"
+                                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#B22E7B]"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -177,18 +178,23 @@ const ProgramPopup = ({ isOpen, onClose, program }: ProgramPopupProps) => {
                                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                     />
                                 </svg>
-                                <span className="font-medium">{program.time}</span>
+                                <span className="text-sm sm:text-base font-medium">{program.time}</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Action Button */}
-                    {/* <Link
-                        to="/minister-summit-registration"
-                        className="block w-full bg-gradient-to-r from-[#9C1FDB] to-[#B22E7B] text-white py-4 rounded-lg font-semibold text-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
-                    >
-                        Register Now
-                    </Link> */}
+                    {program.link && (
+                        <a
+                            href={program.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full bg-gradient-to-r from-[#9C1FDB] to-[#B22E7B] text-white py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+                        >
+                            Register Now
+                        </a>
+                    )}
+
                 </div>
             </div>
         </div>
