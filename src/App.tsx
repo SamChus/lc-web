@@ -38,7 +38,7 @@ function App() {
     date: "2026-01-27T16:30:00", // January 27th, 4:30 PM
     time: "4:30 PM (WAT)",
     image: img,
-    description: "Join us for our Intentional Minister Summit (IMS). Experience transformative teaching, and divine encounters.",
+    description: "Join us for our Intentional Ministers Summit (IMS). Experience transformative teaching, and divine encounters.",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSeV4qYOPu92DyNLVLVIO7yOwTJwNFLkzqBKaO0g76kx5kqBrA/viewform",
   };
 
