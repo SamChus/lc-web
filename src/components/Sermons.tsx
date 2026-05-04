@@ -63,9 +63,15 @@ const Sermons = () => {
           <p className="font-normal text-[40px] leading-[100%] tracking-[0%]">
             Download Apst. Francis Onyebuchi Messages
           </p>
-          <button className="mt-10 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg flex items-center justify-center gap-4 w-[200px] sm:w-[280px] shadow-md bg-[#9C1FDB] hover:bg-[#9c1fdb9b]">
-            Visit
-          </button>
+          <a
+            href="https://youtube.com/@lightworldairforce2023?si=cKaxLW_yuZn3i2tJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-10 transition-colors duration-300 text-white px-6 sm:px-8 py-3 rounded-lg flex items-center justify-center gap-4 w-[200px] sm:w-[280px] shadow-md bg-[#9C1FDB] hover:bg-[#9c1fdb9b]">
+              Visit
+            </button>
+          </a>
         </div>
         <Carousel
           slides={slides}
