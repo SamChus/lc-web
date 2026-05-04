@@ -10,7 +10,7 @@ import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
 import img4 from "./assets/img4.png";
-import img from "./assets/ims.jpg"
+// import img from "./assets/ims.jpg"
 
 import UpcomingEvent from "./components/UpcomingProgram";
 import MinistriesSection from "./components/MinistriesSection";
@@ -28,25 +28,25 @@ import Testimonies from "./components/Testimonies";
 
 function App() {
   const images = [img1, img2, img3, img4];
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
   const [hasShownPopup, setHasShownPopup] = useState(false);
 
   // Sample program data - you can replace this with real data
-  const upcomingProgram = {
-    title: "INTENTIONAL MINISTERS SUMMIT (IMS)",
-    subtitle: "UPCOMING PROGRAM",
-    date: "2026-01-27T16:30:00", // January 27th, 4:30 PM
-    time: "4:30 PM (WAT)",
-    image: img,
-    description: "Join us for our Intentional Ministers Summit (IMS). Experience transformative teaching, and divine encounters.",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSeV4qYOPu92DyNLVLVIO7yOwTJwNFLkzqBKaO0g76kx5kqBrA/viewform",
-  };
+  // const upcomingProgram = {
+  //   title: "INTENTIONAL MINISTERS SUMMIT (IMS)",
+  //   subtitle: "UPCOMING PROGRAM",
+  //   date: "2026-01-27T16:30:00", // January 27th, 4:30 PM
+  //   time: "4:30 PM (WAT)",
+  //   image: img,
+  //   description: "Join us for our Intentional Ministers Summit (IMS). Experience transformative teaching, and divine encounters.",
+  //   link: "https://docs.google.com/forms/d/e/1FAIpQLSeV4qYOPu92DyNLVLVIO7yOwTJwNFLkzqBKaO0g76kx5kqBrA/viewform",
+  // };
 
   // Show popup 2 seconds after page load (only once)
   useEffect(() => {
     if (!hasShownPopup) {
       const timer = setTimeout(() => {
-        setShowPopup(true);
+        // setShowPopup(true);
         setHasShownPopup(true);
       }, 2000);
 
@@ -54,10 +54,10 @@ function App() {
     }
   }, [hasShownPopup]);
 
-  const handleClosePopup = () => {
-    console.log("Close button clicked!"); // Debug log
-    setShowPopup(false);
-  };
+  // const handleClosePopup = () => {
+  //   console.log("Close button clicked!"); // Debug log
+  //   setShowPopup(false);
+  // };
 
   const mission =
     "Raising Ambassadors (Apostolic Kingdom-Based Believers) of Generational Relevance by His Spirit; In Word, Anointing, Wonders and Grace; Irrespective of background or educational disciplines, and making them permissible tools in the hand of God for a Global impact and Apostolic impact.";
