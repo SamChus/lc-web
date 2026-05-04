@@ -5,7 +5,7 @@ import WeeklyProgram from "./components/WeeklyProgram";
 import HeroSection from "./components/Hero";
 import ServiceCountdown from "./components/ServiceCountdown";
 import AboutSection from "./components/AboutSection";
-import ProgramPopup from "./components/ProgramPopup";
+// import ProgramPopup from "./components/ProgramPopup";
 import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
@@ -75,11 +75,11 @@ function App() {
 
     <div className="mx-auto">
       {/* Program Popup */}
-      <ProgramPopup
+      {/* <ProgramPopup
         isOpen={showPopup}
         onClose={handleClosePopup}
         program={upcomingProgram}
-      />
+      /> */}
 
       {/* NAVIGATION */}
       <HeroSection />
